@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artifact One</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <style>
+        .center {
+            display: block;
+            margin: auto;
+        }
+
+        .center-text {
+            text-align: center;
+        }
+
+        .portrait {
+            width: 15%;
+            border-radius: 50%;
+        }
+
+        .artifact {
+            width: 35%;
+        }
+
+        .bottom-left {
+            position: relative; 
+            bottom: 0;
+        }
+
+        h1 {
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 300%;
+            margin-bottom: 0%;
+        }
+
+        h2 {
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 200%;
+            margin-top: 0%;
+        }
+
+        h3 {
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 150%;
+        }
+
+        h6 {
+            padding-left: 36px;
+            text-indent: -36px;
+            width: 50%;
+        }
+
+        html {
+            background-image: linear-gradient(black, #1f002e);
+            min-height: 100vh;
+            color: rgb(226, 207, 164);  
+        }
+
+        p {
+            width: 50%;
+            text-indent: 10%;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="center-text">Artifact One: Software Engineering</h1>
+    <h2 class="center-text">Psuedorandom Maze Generation</h2>
+    <p class="center">For this artifact, I choose the final project from my CS 370 class on Current and Emerging trends in Computer Science. In this class, we created an artificial intelligence (AI) agent that is capable of solving a simple two-dimensional maze after a period of training. The way this was achieved was through the use of a singular maze that was hard-coded and assigning the agent a random position in the maze, utilizing a neural network with Q-Deep Learning to allow the agent to train on the maze with an element of randomization to avoid overfitting.</p>
+    <p></p>
+	<p class="center">This is a particularly suitable artifact for my portfolio as my interests align heavily with AI research and engineering that goes into creating AI models. With the goal of demonstrating software engineering and design principles, this artifact was a great opportunity to showcase my ability to further solve an AI software problem with innovative techniques and solutions that require a high level of design and engineering to perform. With this artifact, the problem I wanted to solve further was the problem of overfitting the AI model. Overfitting an AI model is a problem where the AI model is trained to solve an extremely narrow set of tasks, such as simply solving a singular maze, which can lead to unintended outcomes or make the model less useful. In the case of this artifact, the model was only trained on a hard-coded maze. The position the model starts in is random; however the maze itself is never randomized. This will lead to a case where the model will only know how to effectively solve this singular maze. To solve this problem, I enhanced the artifact by creating a function and adjusting some of the original code base to generate a maze at random. This enhancement required that I also perform testing on the randomly generated maze to ensure every position in the maze can reach the end. </p>
+    <p></p>
+	<p class="center">This enhancement showcases my abilities with software engineering and design because understanding this problem and designing a solution require a higher level of problem solving. In the process of removing the overfitting of the AI model, I needed to establish a generalized use-case for the model, creating a working foundation for finding a solution. In the process of creating the maze itself, I also needed to consider the potential for further issues with a randomized design. Since the pretense of something random means that there may be many unreachable positions in the maze, I needed to also create a solution to ensure every potential position in the maze can reach the goal. This was achieved through clever design and engineering, since this process could be incredibly taxing on the system if not designed well. Since there could be hundreds or thousands of positions in the maze that need to be checked, the most efficient solution is to only visit each position once while assuming that any visited cell is reachable to the current cell, therefore it doesn’t need to be checked again if the current cell has a valid path to the goal. This cascades to the remaining cells in the maze, such that each cell only ever needs to be visited once, without ensuring that each individual cell has a valid path to the goal. As long as there is a valid path somehow connected to each cells history, then the cell never needs to be checked again.</p>
+    <p></p>
+	<p class="center">The course outcomes that I cover with this enhancement include outcomes, 1, 3, and 4. For the first outcome, this is achieved through the use of comments in a way that allows other developers to understand and expand my work further. Each block of code is commented in a way that makes it quickly understandable, making it not only easier to understand what the code is doing, but also allows for easier debugging in the case that a future bug is discovered. Furthermore, I created constant variable where needed to allow for better control and more verbose lines of code to help future developers understand what the code is doing. </p>
+    <p></p>
+	<p class="center">I also employed computing solutions while considering the algorithmic needs for the given problem. I believe in the process of creating a functioning maze that is mostly random, while solving the problem of an overfit AI model demonstrates my abilities to evaluate a problem with the AI model and design an algorithmic and design solution for that problem. Lastly, to demonstrate my ability to use well-founded and innovative solutions, I believe that the idea of creating a pseudo-random maze is a perfect example of using an innovative solution, while addressing a well-founded problem of overfit AI models. This is a common problem in the field of AI, and it is incredibly important to address this issue, especially for a portfolio aiming towards a field of AI engineering and research (Amazon AWS, n.d.).</p>
+    <p></p>
+	<p class="center">In the process of creating the artifact, there were a few challenges that I faced as well as a lot I learned for the sake of software engineering and design. The first major challenge that I faced was a limited understanding of the problem I was addressing. The first edition of the pseudocode that I had created for the maze generation was incorrect, in that it did not consider certain edge cases that need to be designed into the maze generation. One such edge case was step to find and remove a wall. I had originally worked with the assumption that the queue I created would create a scenario where when a group of cells were blocked by walls, the last cell in the queue would be next to a wall. This is not true, and I needed to implement further design to search for a valid wall to destroy, rather than relying on there being an adjacent wall to the final cell in the queue. </p>
+    <p></p>
+	<p class="center">The next major challenge that I overcame and learned from was a need for attention to detail and debugging on the working codebase. As I tested my design and began to retrain my AI models, I ran into issues with some of the working codebase having undetected bugs and had to perform troubleshooting and debugging to resolve them. This is where it seems important to keep a high attention to detail while also reviewing past code to ensure there are no latent bugs. </p>
+    <p></p>
+	<p class="center">Lastly, testing was a big part of this enhancement at each stage. I ran several tests and found that creating visuals for the mazes that I generated to be invaluable at ensuring the accuracy of my generation algorithm. Furthermore, I found it very helpful to print certain variables to the console to keep track of how values were moving through my code base and ensure that each branch of the code was reachable and performed as expected. Here are some of the renderings of the mazes after I got the algorithm working correctly. I have included versions that required no change and versions that required change to show both cases working.</p>
+    <p></p>
+    <h4 class="center-text">Before maze correction - no change needed</h4>
+    <img class="center" src="../images/artifact 1/Before - No Change.png" alt="Showing a simple maze that has all valid paths to the target">
+    <h4 class="center-text">After maze correction - no change needed</h4>
+    <img class="center" src="../images/artifact 1/After - No Change.png" alt="Showing a simple maze that has all valid paths to the target">
+    <h4 class="center-text">Before maze correction - change needed</h4>
+    <img class="center" src="../images/artifact 1/Before - Change Needed.png" alt="Showing a complex maze that has several invalid paths to the target">
+    <h4 class="center-text">After maze correction -  change needed</h4>
+    <img class="center" src="../images/artifact 1/After - Change Needed.png" alt="Showing a complex maze that has the invalid paths to the target corrected">
+    <h4 class="center-text">Source Files:</h4>
+    <a href="../artifacts/Artifact 1/Aaron McDonald Artifact 1.zip" target="_blank" download>
+        <h5 class="center center-text">Artifact File - Baseline</h5>
+    </a>
+    <a href="../artifacts/Artifact 1/Aaron McDonald Artifact 1 - Enhanced.zip" target="_blank" download>
+        <h5 class="center center-text">Artifact File - Enhanced</h5>
+    </a>
+    <a href="../artifacts/Artifact 1/GameExperience Artifact 1 Support File.zip" target="_blank" download>
+        <h5 class="center center-text">Game Experience - Support File Baseline</h5>
+    </a>
+    <a href="../artifacts/Artifact 1/GameExperience Artifact 1 Support File - Enhanced.zip" target="_blank" download>
+        <h5 class="center center-text">Game Experience - Support File Enhanced</h5>
+    </a>
+    <a href="../artifacts/Artifact 1/TreasureMaze Artifact 1 Support File.zip" target="_blank" download>
+        <h5 class="center center-text">Treasure Maze - Support File Baseline</h5>
+    </a>
+    <a href="../artifacts/Artifact 1/TreasureMaze Artifact 1 Support File - Enhanced.zip" target="_blank" download>
+        <h5 class="center center-text">Treasure Maze - Support File Enhanced</h5>
+    </a>
+    <h4 class="center-text">References:</h4>
+    <h6 class="center">Amazon AWS. (n.d.). What is Overfitting? AWS. http://aws.amazon.com/what-is/overfitting/#:~:text=Overfitting%20occurs%20when%20the%20model,to%20several%20reasons%2C%20such%20as%3A&text=The%20training%20data%20size%20is,all%20possible%20input%20data%20values.</h6>
+    <a href="../index.html" class="bottom-left">
+        <h2><< Go Back</h2>
+    </a>
+</body>
