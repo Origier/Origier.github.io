@@ -17,7 +17,7 @@
 }
 
 .bottom-left {
-    position: absolute; 
+    position: relative; 
     bottom: 0;
 }
 
@@ -36,6 +36,12 @@ h2 {
 h3 {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 150%;
+}
+
+h6 {
+    padding-left: 36px;
+    text-indent: -36px;
+    width: 50%;
 }
 
 html {

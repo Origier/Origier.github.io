@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artifact Two</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <style>
+        .center {
+            display: block;
+            margin: auto;
+        }
+
+        .center-text {
+            text-align: center;
+        }
+
+        .portrait {
+            width: 15%;
+            border-radius: 50%;
+        }
+
+        .artifact {
+            width: 35%;
+        }
+
+        .bottom-left {
+            position: relative; 
+            bottom: 0;
+        }
+
+        h1 {
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 300%;
+            margin-bottom: 0%;
+        }
+
+        h2 {
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 200%;
+            margin-top: 0%;
+        }
+
+        h3 {
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 150%;
+        }
+
+        h6 {
+            padding-left: 36px;
+            text-indent: -36px;
+            width: 50%;
+        }
+
+        html {
+            background-image: linear-gradient(black, #1f002e);
+            min-height: 100vh;
+            color: rgb(226, 207, 164);  
+        }
+
+        p {
+            width: 50%;
+            text-indent: 10%;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="center-text">Artifact Two: Data Structures and Algorithms</h1>
+    <h2 class="center-text">AVL Tree Creation in C++</h2>
+    <p class="center">The artifact for this milestone was the final project from CS 300: Data Structures and Algorithms. The project is a binary search tree, where the focus of the project was creating a data structure with appropriately implemented algorithms to have a self-sorting data structure that sorts relevant data on insertion. I created this artifact over a year ago now in C++ and for my enhancement I decided to create an alternative, yet more efficient version of a binary search tree called an AVL tree. AVL trees are binary search trees that are auto-balancing. This means that as the sub-trees of a given node become unbalanced or as the difference between their heights is greater than 1, the AVL tree will automatically perform rotations too ensure the balance remains less than or equal to 1.</p>
+    <p></p>
+	<p class="center">I think that the AVL tree is a good addition to my ePortfolio as it is a good example of utilizing modern computer science techniques to make an algorithm and data structure more efficient. The AVL tree is massively more efficient than the basic binary search tree, as it avoids a common problem with binary search trees. Since data is not guaranteed to be sorted on insertion, there is a good chance that data will be inserted in ascending or descending order. This will lead to very tall trees, and when the tree isn’t self-balancing, then the tree will perform no better than a vector or a linked list on insertion. As an example of this performance enhancement I ran some tests to measure the time difference between the two data structures, performing 10,000,000 insertions and searches of random numbers. Here is the screenshot to showcase the test results:</p>
+    <p></p>
+	<img class="center" src="../images/artifact 2/time-test.png" alt="An image showing the time difference between the AVL tree and BST.">
+    <p></p>
+    <p class="center">As seen from this screenshot, the AVL tree works much more efficiently than the basic binary search tree, due to the self-balancing causing minor performance loss for a drastic performance gain. The overall expected time complexity for insertion and search for an AVL tree is logarithmic whereas for a binary search tree, in the worst case the time complexity would be linear. This is why I believe that this was a good showcase of my skills with data structures and algorithms, and I believe that this is a great show piece for a portfolio on artificial intelligence (AI). In the pursuit of research of AI, there is a lot of data that needs to be handled and manipulated. Having the capability of creating data structures and algorithms that work efficiently will large volumes of data is crucial for engineering software solutions to AI development.</p>
+    <p></p>
+    <p class="center">As for the course outcomes, I believe that this enhancement captures the last three course outcomes, with the focus on solving an algorithmic problem, using well-founded techniques and coding with a security mindset. The entire problem was an algorithmic problem, where the focus is on creating a more efficient data structure, that maintains the inherent advantage of using a binary search tree. The AVL tree accomplishes this by maintaining the ordered structure while also balancing the tree to make it far more efficient. For utilizing well-founded techniques, I believe that the research involved in discovering the AVL tree through online resources, as well as implementing the data structure, are examples of using well-founded techniques. In any attempt to solve a problem, I believe it’s important to use your online resources to discover solutions that already exist, as I had with discovering the AVL tree. From there I implemented the concepts to function in C++ and performed tests to ensure the tree worked as expected. Lastly, I am including the security mindset because of the language that I used for this enhancement. Since C++ is being used, as well as pointers and the “new” and “delete” operator, it’s very important to be aware of how these different features of the language operate. Memory leaks are a common security concern that can lead to unexpected behavior or software crashes. When creating a piece of software that utilizes pointers, it is always imperative to be aware of how memory is being allocated, and to make sure that any allocated memory on the heap is also deallocated.</p>
+    <p></p>
+    <h4 class="center-text">Source Files:</h4>
+    <a href="../artifacts/Artifact 2/Aaron McDonald Artifact 2.zip" target="_blank" download>
+        <h5 class="center center-text">Artifact File - Baseline</h5>
+    </a>
+    <a href="../artifacts/Artifact 2/Aaron McDonald Artifact 2 - Enhanced.zip" target="_blank" download>
+        <h5 class="center center-text">Artifact File - Enhanced</h5>
+    </a>
+    <a href="../index.html" class="bottom-left">
+        <h2><< Go Back</h2>
+    </a>
+</body>
